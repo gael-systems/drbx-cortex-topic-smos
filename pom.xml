@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+   <modelVersion>4.0.0</modelVersion>
+
+   <groupId>fr.gael.drb</groupId>
+   <artifactId>drbx-cortex-topic-smos</artifactId>
+   <packaging>jar</packaging>
+   <version>1.0.0</version>
+
+   <name>Drbx Cortex Topic for SMOS</name>
+
+   <parent>
+      <groupId>fr.gael</groupId>
+      <artifactId>maven</artifactId>
+      <version>1-0-rc-5</version>
+   </parent>
+
+   <dependencies>
+
+      <dependency>
+         <groupId>fr.gael.drb</groupId>
+         <artifactId>drb</artifactId>
+         <version>2.5.9</version>
+      </dependency>
+
+      <dependency>
+         <groupId>fr.gael.drb</groupId>
+         <artifactId>drbx-cortex</artifactId>
+         <version>1.0.5</version>
+      </dependency>
+
+      <dependency>
+         <groupId>fr.gael.drb</groupId>
+         <artifactId>drbx-impl-zip</artifactId>
+         <version>1.1.25</version>
+      </dependency>
+
+   </dependencies>
+
+</project>

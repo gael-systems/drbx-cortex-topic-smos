@@ -1,0 +1,33 @@
+*.class
+target/
+
+# Package Files
+*.jar
+*.war
+
+# JVM crash logs
+hs_err_pid*
+
+# Eclipse files
+.project
+.settings
+.classpath
+
+# IntelliJ files
+.idea/
+*.iml
+*.iws
+
+# Netbeans files
+nbproject
+nbactions.xml
+nb-configuration.xml
+
+# OS files
+Thumbs.db*
+ehthumbs.db
+[Dd]esktop.ini
+*.lnk
+.DS_Store
+._*
+*~

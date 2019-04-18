@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+  <!ENTITY rdf  "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY owl  "http://www.w3.org/2002/07/owl#">
+  <!ENTITY drb  "http://www.gael.fr/drb#">
+  <!ENTITY smos "http://www.gael.fr/smos#">
+  <!ENTITY img  "http://www.gael.fr/drb/image#">
+]>
+
+<rdf:RDF xmlns:rdf  = "&rdf;"
+         xmlns:rdfs = "&rdfs;"
+         xmlns:owl  = "&owl;"
+         xmlns:drb  = "&drb;"
+         xmlns:smos = "&smos;"
+         xmlns:img  = "&img;">
+
+   <owl:Ontology rdf:about="&smos;"/>
+
+   <!--
+   Based on
+   SMOS_L1_Aux_Data_Product_Specification.pdf  SMOS_NRT_BUFR_Specification.pdf
+   SMOS_L2_Aux_Data_Product_Specification.pdf  SMOS_NRT_Product_Format.pdf
+   SMOS_Level-0_product_specifications.pdf
+   available on P141_GAEL_DRB
+   -->
+
+   <!-- ========================================= -->
+   <!-- PRODUCT                                   -->
+   <!-- ========================================= -->
+
+   <owl:Class rdf:about="&smos;product">
+      <rdfs:label xml:lang="en">SMOS Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&drb;zip"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>SM_(TEST|OPER|REPR)_.........._[0-9]{8}T[0-9]{6}_[0-9]{8}T[0-9]{6}_[0-9]{3}_[0-9]{3}_[0-9]{1}\.zip</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ========================================= -->
+   <!-- PRODUCT FOLDER POUR TESTS                 -->
+   <!-- ========================================= -->
+
+   <owl:Class rdf:about="&smos;productFolder">
+      <rdfs:label xml:lang="en">SMOS Product Folder (Test only)</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&drb;item"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>SM_(TEST|OPER|REPR)_.........._[0-9]{8}T[0-9]{6}_[0-9]{8}T[0-9]{6}_[0-9]{3}_[0-9]{3}_[0-9]{1}</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ========================================= -->
+   <!-- XML Header                                -->
+   <!-- ========================================= -->
+
+   <owl:Class rdf:about="&smos;productXmlHeader">
+      <rdfs:label xml:lang="en">SMOS Product: XML Header</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&drb;item"/>
+      <rdfs:subClassOf rdf:resource="&drb;xml-content"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>SM_(TEST|OPER|REPR)_.........._[0-9]{8}T[0-9]{6}_[0-9]{8}T[0-9]{6}_[0-9]{3}_[0-9]{3}_[0-9]{1}\.HDR</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+
+   <!-- ========================================= -->
+   <!-- PRODUCT LEVEL-1B                          -->
+   <!-- ========================================= -->
+
+   <!--
+   <owl:Class rdf:about="&smos;productL1B">
+      <rdfs:label xml:lang="en">SMOS Level-1B Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&smos;product"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>SM_(TEST|OPER|REPR)_MIR_....1B_[0-9]{8}T[0-9]{6}_[0-9]{8}T[0-9]{6}_[0-9]{3}_[0-9]{3}_[0-9]{1}\.zip</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+   -->
+
+   <!-- ========================================= -->
+   <!-- PRODUCT LEVEL-1C                          -->
+   <!-- ========================================= -->
+
+   <!--
+   <owl:Class rdf:about="&smos;productL1C">
+      <rdfs:label xml:lang="en">SMOS Level-1C Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&smos;product"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>SM_(TEST|OPER|REPR)_MIR_....1C_[0-9]{8}T[0-9]{6}_[0-9]{8}T[0-9]{6}_[0-9]{3}_[0-9]{3}_[0-9]{1}\.zip</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+   -->
+
+   <!-- ========================================= -->
+   <!-- PRODUCT LEVEL-2                           -->
+   <!-- ========================================= -->
+
+   <!--
+   <owl:Class rdf:about="&smos;productL2">
+      <rdfs:label xml:lang="en">SMOS Level-2 Product</rdfs:label>
+      <rdfs:comment xml:lang="en">
+      </rdfs:comment>
+      <rdfs:subClassOf rdf:resource="&smos;product"/>
+      <drb:signature rdf:parseType="Resource">
+         <drb:nameMatch>SM_(TEST|OPER|REPR)_MIR_.....2_[0-9]{8}T[0-9]{6}_[0-9]{8}T[0-9]{6}_[0-9]{3}_[0-9]{3}_[0-9]{1}\.zip</drb:nameMatch>
+      </drb:signature>
+   </owl:Class>
+   -->
+
+</rdf:RDF>
