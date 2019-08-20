@@ -40,20 +40,6 @@
    </owl:Class>
 
    <!-- ========================================= -->
-   <!-- PRODUCT FOLDER POUR TESTS                 -->
-   <!-- ========================================= -->
-
-   <owl:Class rdf:about="&smos;productFolder">
-      <rdfs:label xml:lang="en">SMOS Product Folder (Test only)</rdfs:label>
-      <rdfs:comment xml:lang="en">
-      </rdfs:comment>
-      <rdfs:subClassOf rdf:resource="&drb;item"/>
-      <drb:signature rdf:parseType="Resource">
-         <drb:nameMatch>SM_(TEST|OPER|REPR)_.........._[0-9]{8}T[0-9]{6}_[0-9]{8}T[0-9]{6}_[0-9]{3}_[0-9]{3}_[0-9]{1}</drb:nameMatch>
-      </drb:signature>
-   </owl:Class>
-
-   <!-- ========================================= -->
    <!-- XML Header                                -->
    <!-- ========================================= -->
 
